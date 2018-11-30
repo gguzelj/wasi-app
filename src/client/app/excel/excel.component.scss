@@ -1,0 +1,15 @@
+.excel {
+  display: block;
+  padding: 16px;
+
+  .time-to,
+  .ended {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+  }
+
+  h3 {
+    color: #444;
+  }
+}

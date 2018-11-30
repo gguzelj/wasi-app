@@ -1,0 +1,100 @@
+.excel-table-container {
+  display: block;
+
+  .excel-table {
+    .long-field {
+      /*@include respond-to(dt) {
+        max-width: 0;
+        min-width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }*/
+    }
+
+    table {
+      color: #444;
+      font-size: 12px;
+      text-shadow: 1px 1px 0 #fff;
+      background: #eaebec;
+      box-shadow: 0 1px 2px #d1d1d1;
+      width: 100%;
+      margin: 16px 0;
+
+      th {
+        padding: 10px 10px 10px 10px;
+        background: #ededed;
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 0.875rem;
+
+        &:first-child {
+          text-align: left;
+          padding-left: 20px;
+        }
+      }
+
+      td {
+        &:first-child {
+          text-align: left;
+          padding-left: 20px;
+        }
+
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 0.985rem;
+        padding: 10px;
+        background: #fafafa;
+      }
+
+      tr {
+        text-align: center;
+        padding-left: 20px;
+
+        &.even td {
+          background: #f6f6f6;
+        }
+
+        &:hover td {
+          background: #f2f2f2;
+        }
+      }
+/*
+      @include respond-to(ph) {
+        border: 0;
+
+        thead {
+          display: none;
+        }
+
+        tr {
+          margin-bottom: 10px;
+          display: block;
+          border-bottom: 2px solid #ddd;
+          padding: 0;
+        }
+
+        td {
+          display: block;
+          text-align: right;
+          font-size: 13px;
+          border-bottom: 1px dotted #ccc;
+        }
+
+        td:first-child {
+          text-align: right;
+        }
+
+        td:last-child {
+          border-bottom: 0;
+        }
+
+        td:before {
+          content: attr(data-label);
+          float: left;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }*/
+    }
+  }
+
+}

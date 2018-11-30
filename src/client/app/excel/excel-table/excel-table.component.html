@@ -1,0 +1,41 @@
+<div class="excel-table-container">
+
+  <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+
+  <div class="excel-table" *ngIf="data?.length > 0 && !loading">
+    <table>
+      <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Ip</th>
+        <th>SO</th>
+        <th>Service Pack</th>
+        <th>Tipo</th>
+        <th>Oficina</th>
+        <th>Usuario</th>
+        <th>Nombre Usuario</th>
+        <th>Última Conexión</th>
+        <th>Tel.</th>
+      </tr>
+
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of data | LockFilter: query">
+        <td data-label="Nombre">{{item.name}}</td>
+        <td data-label="Ip">{{item.ip}}</td>
+        <td data-label="SO">{{item.SO}}</td>
+        <td data-label="Service Pack">{{item.servicePack}}</td>
+        <td data-label="Tipo">{{item.type}}</td>
+        <td data-label="Oficina">{{item.office}}</td>
+        <td data-label="Usuario">{{item.user}}</td>
+        <td data-label="Nombre Usuario">{{item.userName}}</td>
+        <td data-label="Última Conexión">{{item.lastConnection}}</td>
+        <td data-label="Teléfono">{{item.phone}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="loader-container" *ngIf="loading">
+    <div class="loader loader--md"></div>
+  </div>
+</div>
