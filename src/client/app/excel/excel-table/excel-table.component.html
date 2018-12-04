@@ -21,16 +21,16 @@
       </thead>
       <tbody>
       <tr *ngFor="let item of data | LockFilter: search">
-        <td data-label="Nombre">{{item.name}}</td>
-        <td data-label="Ip">{{item.ip}}</td>
-        <td data-label="SO">{{item.SO}}</td>
-        <td data-label="Service Pack">{{item.servicePack}}</td>
-        <td data-label="Tipo">{{item.type}}</td>
-        <td data-label="Oficina">{{item.office}}</td>
-        <td data-label="Usuario">{{item.user}}</td>
-        <td data-label="Nombre Usuario">{{item.userName}}</td>
-        <td data-label="Última Conexión">{{item.lastConnection}}</td>
-        <td data-label="Teléfono">{{item.phone}}</td>
+        <td data-label="Nombre">{{item[0]}}</td>
+        <td data-label="Ip">{{item[1]}}</td>
+        <td data-label="SO">{{item[2]}}</td>
+        <td data-label="Service Pack">{{item[3]}}</td>
+        <td data-label="Tipo">{{item[4]}}</td>
+        <td data-label="Oficina">{{item[5]}}</td>
+        <td data-label="Usuario">{{item[6]}}</td>
+        <td data-label="Nombre Usuario">{{item[7]}}</td>
+        <td data-label="Última Conexión">{{item[8]}}</td>
+        <td data-label="Teléfono">{{item[9]}}</td>
       </tr>
       </tbody>
     </table>

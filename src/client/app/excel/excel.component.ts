@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-excel',
@@ -8,11 +9,14 @@ import {Component, OnInit} from '@angular/core';
 export class ExcelComponent implements OnInit {
 
   mockExcel: any;
+  data : any;
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
+    this.data = this.http.get('http://127.0.0.1:4201/api/api/inventory');
+
     this.mockExcel = [
       {
         name: 'SAR001241',
