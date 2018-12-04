@@ -4,7 +4,6 @@
  */
 import * as http from 'http';
 import { server } from '../index';
-import logger from '../logger';
 
 /**
  * Get port from environment and store in Express.
@@ -60,11 +59,9 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      logger.error(bind + ' requires elevated privileges');
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      logger.error(bind + ' is already in use');
       process.exit(1);
       break;
     default:
@@ -79,5 +76,4 @@ function onError(error) {
 function onListening() {
   const addr = httpServer.address();
   const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
-  logger.info('Listening on ' + bind + ' ' + process.env.NODE_ENV);
 }

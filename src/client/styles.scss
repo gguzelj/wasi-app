@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+}
+
+html,
+body,
+main {
+  font-family: 'ProximaNova', sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+// almundo base styles
+// Grid definitions
+$grid-gutter: 16px;
+
+[class^='am-container'] {
+  padding: 0 8px;
+}
+
+/*
+@include make-containers(
+  'am',
+  'container',
+  (
+    'full': 100%,
+    '': 1344px,
+  )
+);
+
+@mixin shadow-panel {
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+}*/
+
+main script {
+  display: none !important;
+}
+
+.am-preloader {
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -32px;
+  margin-left: -32px;
+
+  &:after,
+  &:before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    border-radius: 50%;
+    background: #df6800;
+    animation: pulse-animation 1s infinite linear;
+    transform: scale(1.15);
+  }
+
+  &:after {
+    background-size: cover;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2My45OThweCIgdmlld0JveD0iMCAwIDY0IDYzLjk5OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjQgNjMuOTk4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgaWQ9IkxheWVyXzFfMV8iPjxnPjxwYXRoIHN0eWxlPSJmaWxsOiNDQ0NDQ0M7IiBkPSJNNjQsMzEuOTk1YzAsMTcuNjc2LTE0LjMzNCwzMi4wMDMtMzEuOTk1LDMyLjAwM0MxNC4zMzYsNjMuOTk4LDAsNDkuNjcxLDAsMzEuOTk1QzAsMTQuMzI2LDE0LjMzNiwwLDMyLjAwNSwwQzQ5LjY2NiwwLDY0LDE0LjMyNiw2NCwzMS45OTV6Ii8+PGc+PHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIGQ9Ik0yNS4yNzMsNTEuMDk4bDYuOTMyLDcuMDU3bDE0LjAyOS0xMi4wMjVjOC4yNTQtNy42MDksOC40NDEtMTYuMDI1LDYuNDIyLTIyLjMxMkM1MC40NTMsMTYuOTgsNDMuNjc0LDguODkxLDMxLjk5Myw4Ljg5MWMtNS4wNjIsMC0xMC4wNTEsMS44NjktMTQuMDQsNS4yNTRjLTguNzk1LDcuNDctMTAuMDI2LDIwLjI0OC0yLjc2MywyOC40NzljMi41MTQsMi44MzMsNS4yMyw1LjA3OCw3LjI4LDYuMDI4bDEyLjIyLTEwLjEyN0gyMy40OTJsLTAuMDcyLTAuMDg0Yy00LjUzMy01LjIzNC00LjE5LTEyLjkxMywwLjc3LTE3LjEyNmMyLjI2Ny0xLjkyOCw1LjA5Ni0yLjk4Niw3Ljk1OC0yLjk4NmMzLjM4NSwwLDYuNjI3LDEuNDczLDguOSw0LjA0YzIuMDgyLDIuMzUyLDMuMDgyLDUuMzU1LDIuODM2LDguNDY5Yy0wLjI1NCwzLjExMS0xLjIyNyw1Ljc3MS0zLjkwNiw4LjAyOEMzOS45LDM4LjkzMiwyNS4yNzMsNTEuMDk4LDI1LjI3Myw1MS4wOTh6Ii8+PC9nPjwvZz48L2c+PGcgaWQ9IkxheWVyXzEiPjwvZz48L3N2Zz4=);
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      opacity: 0.5;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.5;
+    }
+  }
+}

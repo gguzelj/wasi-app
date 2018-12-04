@@ -1,15 +1,17 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ExcelTableComponent} from './excel-table/excel-table.component';
-import {ExcelFilterComponent} from './excel-filter/excel-filter.component';
 import {ExcelComponent} from './excel.component';
+import {FormsModule} from "@angular/forms";
+import {SearchPipe} from "../search/search.pipe";
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   declarations: [
+    SearchPipe,
     ExcelComponent,
     ExcelTableComponent,
-    ExcelFilterComponent,
   ],
+  exports : [ExcelComponent, ExcelTableComponent]
 })
 export class ExcelModule { }

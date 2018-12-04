@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from 'express';
-import { RankingService } from './ranking.service';
 
 export class InventoryController {
   public static async getInventory(
@@ -8,10 +7,8 @@ export class InventoryController {
     next: NextFunction,
   ) {
     // Read Excel file, call and external api, etc
-    const { page, nick, size } = request.query;
-    const rankingService = new RankingService();
     try {
-      const res = await rankingService.getRanking(page, nick, size);
+      const res = [];
       response.json(res);
     } catch (err) {
       next(err);

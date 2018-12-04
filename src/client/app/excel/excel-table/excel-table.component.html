@@ -1,6 +1,6 @@
 <div class="excel-table-container">
 
-  <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+  <input type="text" class="form-control" placeholder="Search" [(ngModel)]="search" id="listSearch">
 
   <div class="excel-table" *ngIf="data?.length > 0 && !loading">
     <table>
@@ -20,7 +20,7 @@
 
       </thead>
       <tbody>
-      <tr *ngFor="let item of data | LockFilter: query">
+      <tr *ngFor="let item of data | LockFilter: search">
         <td data-label="Nombre">{{item.name}}</td>
         <td data-label="Ip">{{item.ip}}</td>
         <td data-label="SO">{{item.SO}}</td>

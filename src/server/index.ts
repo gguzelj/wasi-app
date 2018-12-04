@@ -21,7 +21,7 @@ if (env === 'local') {
 server.use(compression());
 
 //Add healthcheck endpoint
-server.get('/challenge/health', require('express-healthcheck')());
+server.get('/inventory/health', require('express-healthcheck')());
 
 // api routes
 server.use(basePath + '/api', api);
