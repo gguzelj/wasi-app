@@ -5,6 +5,7 @@ import {ExcelComponent} from './excel.component';
 import {FormsModule} from "@angular/forms";
 import {SearchPipe} from "../search/search.pipe";
 import {HttpClientModule} from '@angular/common/http';
+import {HeaderComponent} from "./header/header.component";
 
 @NgModule({
   imports: [CommonModule, FormsModule, HttpClientModule],
@@ -12,7 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
     SearchPipe,
     ExcelComponent,
     ExcelTableComponent,
+    HeaderComponent,
   ],
-  exports : [ExcelComponent, ExcelTableComponent]
+  exports : [ExcelComponent, ExcelTableComponent, HeaderComponent]
 })
 export class ExcelModule { }
