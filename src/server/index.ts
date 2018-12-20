@@ -6,7 +6,7 @@ import app from './app';
 import * as httpStatus from 'http-status';
 import * as morgan from 'morgan';
 
-const basePath = '/api';
+const basePath = '/inventory';
 
 const env = process.env.NODE_ENV;
 const server: express.Application = express();
@@ -24,7 +24,7 @@ server.use(compression());
 server.get('/inventory/health', require('express-healthcheck')());
 
 // api routes
-server.use(basePath + '/api', api);
+server.use(basePath + "/api", api);
 
 //app routes
 if (env !== 'local') {

@@ -22,7 +22,7 @@ api.use(
   }),
 );
 
-api.use('/inventory', InventoryRouter);
+api.use('/data', InventoryRouter);
 
 //try to convert all error to common interface
 api.use(errorConverter);
